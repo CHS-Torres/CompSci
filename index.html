@@ -1,15 +1,67 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>
-        Computer Science @ Centennial High School Website
-    </title>
+  <title>Student Access Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .top-bar {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .top-bar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .top-bar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .section {
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+  <div class="top-bar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#ctso-clubs">CTSO/Clubs</a>
+  </div>
 
+  <div class="main-content">
+    <h1>Welcome to Our Student Access Website</h1>
+    <p>This website is designed to provide students with easy access to important information about classes, clubs, and other resources. Explore the sections above to learn more!</p>
+  </div>
 
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+  <div id="home" class="section">
+    <h2>Home</h2>
+    <p>Welcome to the home page. Here you will find the latest updates and news.</p>
+  </div>
 
+  <div id="about" class="section">
+    <h2>About</h2>
+    <p>Learn more about our mission and values.</p>
+  </div>
+
+  <div id="classes" class="section">
+    <h2>Classes</h2>
+    <p>Information about the classes we offer.</p>
+  </div>
+
+  <div id="ctso-clubs" class="section">
+    <h2>CTSO/Clubs</h2>
+    <p>Explore the various clubs and organizations available to students.</p>
+  </div>
 </body>
 </html>
