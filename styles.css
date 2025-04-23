@@ -101,7 +101,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0; 
-    background-image: url('/images/Fortress.jpg'); /* School Image */
+    background-image: url('../images/GD_logo.png'); /* School Image */
     background-size: cover; /* make the image cover the area */
     background-position: center; /* center the image */
     filter: blur(10px); /* Adjust blur level */
