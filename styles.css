@@ -104,6 +104,7 @@ nav {
     position: relative;
     height: 400px; /* Adjust the height as needed */
     overflow: hidden;
+    z-index: -1;
 }
 
 .blurred-section::before {
@@ -118,6 +119,7 @@ nav {
     background-position: center; /* center the image */
     filter: blur(10px); /* Adjust blur level */
     transition: filter 1s ease; /* transition the blur effect after */
+    z-index: -1;
 }
 
 

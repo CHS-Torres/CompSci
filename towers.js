@@ -1,7 +1,7 @@
 document.getElementById("darkModeToggle").addEventListener("click", function(){
     document.body.classList.toggle("dark-mode");
 })
-let images = ["image1.jpg", "image2.jpg", "Fortress.jpg"];
+let images = ["image1.jpg", "image2.jpg", "../Fortress.jpg"];
 let index = 0;
 setInterval(() => {
     document.getElementById("imageContainer").style.backgroundImage = `url(${images[index]})`;
