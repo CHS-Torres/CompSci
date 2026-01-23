@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr. Torres’ Computer & CTE Parent Hub</title>
+  <meta name="description" content="One-page parent hub for Intro to Software Technology, AP CSP, AP CSA & Game Design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Favicon optional -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-emoji" aria-hidden="true">🎉</span>
+        <h1 class="brand-title" data-i18n="title">Mr. Torres’ Computer & CTE Parent Hub</h1>
+      </div>
+
+      <div class="controls">
+        <button id="langToggle" class="btn" aria-live="polite" aria-label="Toggle language">
+          Español
+        </button>
+      </div>
+    </div>
+
+    <nav class="site-nav" role="navigation" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#welcome" data-i18n="nav.welcome">Welcome</a></li>
+          <li><a href="#updates" data-i18n="nav.updates">Weekly Updates</a></li>
+          <li><a href="#pathways" data-i18n="nav.pathways">Course Pathways</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#what-we-learn" data-i18n="nav.learn">What We Learn</a></li>
+          <li><a href="#library" data-i18n="nav.library">Docs Library</a></li>
+          <li><a href="#showcase" data-i18n="nav.showcase">Student Showcase</a></li>
+          <li><a href="#support" data-i18n="nav.support">Family Support</a></li>
+          <li><a href="#citizenship" data-i18n="nav.citizenship">Digital Citizenship</a></li>
+          <li><a href="#help" data-i18n="nav.help">How Students Get Help</a></li>
+          <li><a href="#why" data-i18n="nav.why">Why These Courses Matter</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <!-- Welcome -->
+    <section id="welcome" class="card">
+      <h2 data-i18n="welcome.title">📌 Welcome! / Bienvenidos</h2>
+      <p data-i18n="welcome.body">
+        Hello families! This one page hub gives you the most important information to help your student succeed in Mr. Torres’ Computer & CTE classes.
+        Available in English & Español. Estoy disponible para ayudarle cuando necesite.
+      </p>
+    </section>
+
+    <!-- Weekly Updates -->
+    <section id="updates" class="card">
+      <h2 data-i18n="updates.title">📅 Weekly Updates & Important Dates</h2>
+
+      <div class="split">
+        <div>
+          <h3 data-i18n="updates.whatsComing">Weekly “What’s Coming”</h3>
+          <p data-i18n="updates.posted">Posted every week on:</p>
+          <ul>
+            <li>
+              <a href="https://fultonschools.instructure.com" target="_blank" rel="noopener"
+                 data-i18n="updates.canvas">Canvas</a>
+            </li>
+            <li>
+              <a href="https://chs-torres.github.io/CompSci/" target="_blank" rel="noopener"
+                 data-i18n="updates.site">Class site: https://chs-torres.github.io/CompSci/</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 data-i18n="updates.deadlines">Major Deadlines & Events</h3>
+          <p data-i18n="updates.calendar">
+            A full visibility calendar is available online (projects, tests, AP checkpoints, Game Design milestones).
+          </p>
+          <!-- Replace the # with your real calendar URL (Google Calendar public link or Outlook published link) -->
+          <a class="btn btn-secondary" href="#" data-i18n="updates.viewCalendar">View Full Calendar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pathways -->
+    <section id="pathways" class="card">
+      <h2 data-i18n="pathways.title">🧭 Course Pathways</h2>
+      <p data-i18n="pathways.body">
+        All classes taught by Mr. Torres are CTE electives, and:
+      </p>
+      <ul>
+        <li data-i18n="pathways.apCount">
+          AP CSP & AP CSA count toward graduation pathway completion
+        </li>
+      </ul>
+      <p data-i18n="pathways.contact">
+        If you have questions about how these courses support career pathways, contact me anytime.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2 data-i18n="contact.title">📞 How to Reach Mr. Torres</h2>
+      <div class="split">
+        <div>
+          <h3 data-i18n="contact.bestTimes">Best contact times:</h3>
+          <ul>
+            <li>7:30 AM</li>
+            <li data-i18n="contact.after">After 3:30 PM</li>
+          </ul>
+          <h3 data-i18n="contact.languages">Languages:</h3>
+          <ul>
+            <li data-i18n="contact.langs">English & Spanish / Inglés y Español</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:torresa2@fultonschools.org">torresa2@fultonschools.org</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Learn -->
+    <section id="what-we-learn" class="card">
+      <h2 data-i18n="learn.title">🧩 What We Learn (Family-Friendly Unit Guides)</h2>
+
+      <article class="unit">
+        <h3 data-i18n="learn.web.title">🌐 Web Development (HTML/CSS/JS)</h3>
+        <ul>
+          <li data-i18n="learn.web.point1">Structure & accessibility using semantic HTML</li>
+          <li data-i18n="learn.web.point2">Responsive design with CSS</li>
+          <li data-i18n="learn.web.point3">Interactive pages with events</li>
+        </ul>
+        <p class="muted" data-i18n="learn.web.helpTitle">How families can help:</p>
+        <ul class="help">
+          <li data-i18n="learn.web.help1">Ask: “How does your page adapt to different screens?”</li>
+          <li data-i18n="learn.web.help2">Review HTML tags together</li>
+          <li data-i18n="learn.web.help3">Encourage reading MDN docs</li>
+        </ul>
+      </article>
+
+      <article class="unit">
+        <h3 data-i18n="learn.py.title">🐍 Python Programming</h3>
+        <ul>
+          <li data-i18n="learn.py.point1">Data types & lists</li>
+          <li data-i18n="learn.py.point2">Loops & conditional logic</li>
+          <li data-i18n="learn.py.point3">Functions & problem decomposition</li>
+        </ul>
+        <p class="muted" data-i18n="learn.py.helpTitle">How families can help:</p>
+        <ul class="help">
+          <li data-i18n="learn.py.help1">Ask them to explain a function</li>
+          <li data-i18n="learn.py.help2">Encourage checking error messages</li>
+          <li data-i18n="learn.py.help3">Help them test one idea at a time</li>
+        </ul>
+      </article>
+
+      <article class="unit">
+        <h3 data-i18n="learn.java.title">☕ Java (AP CSA)</h3>
+        <ul>
+          <li data-i18n="learn.java.point1">Classes, methods & objects</li>
+          <li data-i18n="learn.java.point2">Algorithms and debugging</li>
+          <li data-i18n="learn.java.point3">Preparing for AP certification readiness</li>
+        </ul>
+        <p class="muted" data-i18n="learn.java.helpTitle">How families can help:</p>
+        <ul class="help">
+          <li data-i18n="learn.java.help1">Ask what a class does in their project</li>
+          <li data-i18n="learn.java.help2">Discuss debugging steps</li>
+        </ul>
+      </article>
+
+      <article class="unit">
+        <h3 data-i18n="learn.unity.title">🎮 C# & Unity Game Development</h3>
+        <ul>
+          <li data-i18n="learn.unity.point1">C# scripting basics</li>
+          <li data-i18n="learn.unity.point2">Unity components & scenes</li>
+          <li data-i18n="learn.unity.point3">Game loops, iteration & playtesting</li>
+        </ul>
+        <p class="muted" data-i18n="learn.unity.helpTitle">How families can help:</p>
+        <ul class="help">
+          <li data-i18n="learn.unity.help1">Playtest with your student</li>
+          <li data-i18n="learn.unity.help2">Ask about choices they made in their game</li>
+          <li data-i18n="learn.unity.help3">Encourage reviewing Unity docs</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Docs Library -->
+    <section id="library" class="card">
+      <h2 data-i18n="library.title">🧭 Documentation Library</h2>
+      <p data-i18n="library.body">
+        Students are taught how to read technical documentation effectively—this is a core part of our classroom culture.
+      </p>
+      <p data-i18n="library.reco">Recommended links (English & some Spanish options):</p>
+      <ul class="grid-links">
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener">Python Docs</a></li>
+        <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank" rel="noopener">Java Tutorials</a></li>
+        <li><a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank" rel="noopener">Microsoft C# Docs</a></li>
+        <li><a href="https://docs.unity3d.com/Manual/index.html" target="_blank" rel="noopener">Unity Docs</a></li>
+      </ul>
+    </section>
+
+    <!-- Showcase -->
+    <section id="showcase" class="card">
+      <h2 data-i18n="showcase.title">🥇 Student Showcase</h2>
+      <p data-i18n="showcase.body">
+        We highlight student creativity and growth through featured projects:
+      </p>
+      <ul>
+        <li data-i18n="showcase.web">Web Pages</li>
+        <li data-i18n="showcase.py">Python Games</li>
+        <li data-i18n="showcase.java">Java Programs</li>
+        <li data-i18n="showcase.unity">Unity Games</li>
+      </ul>
+      <p class="muted" data-i18n="showcase.privacy">
+        Students choose what gets posted publicly. Everything else stays in Canvas.
+      </p>
+    </section>
+
+    <!-- Family Support -->
+    <section id="support" class="card">
+      <h2 data-i18n="support.title">❤️ How Families Can Support Student Success</h2>
+
+      <article>
+        <h3 data-i18n="support.routineTitle">🕒 Weekly Routine (Easy to Remember!)</h3>
+        <p data-i18n="support.routineIntro">
+          Your teaching style is highly structured and consistent. This is how the week typically works (based on your history):
+        </p>
+        <div class="table-like" role="table" aria-label="Weekly routine">
+          <div class="row head" role="row">
+            <div role="columnheader" data-i18n="support.day">Day</div>
+            <div role="columnheader" data-i18n="support.what">What Happens</div>
+          </div>
+          <div class="row" role="row">
+            <div role="cell" data-i18n="support.mon">Monday</div>
+            <div role="cell" data-i18n="support.monDetail">New weekly slide deck, bell ringer, overview</div>
+          </div>
+          <div class="row" role="row">
+            <div role="cell" data-i18n="support.tueThu">Tue–Thu</div>
+            <div role="cell" data-i18n="support.tueThuDetail">Skill practice, projects, documentation</div>
+          </div>
+          <div class="row" role="row">
+            <div role="cell" data-i18n="support.thu">Thursday</div>
+            <div role="cell" data-i18n="support.thuDetail">All work due in one consolidated Canvas assignment</div>
+          </div>
+          <div class="row" role="row">
+            <div role="cell" data-i18n="support.fri">Friday</div>
+            <div role="cell" data-i18n="support.friDetail">Reflection day, catch-up, AP practice</div>
+          </div>
+        </div>
+        <p class="muted" data-i18n="support.parentsLove">(Parents love this consistency!)</p>
+      </article>
+
+      <article>
+        <h3 data-i18n="support.strengthsTitle">📚 Strengths-Based Communication</h3>
+        <ul>
+          <li data-i18n="support.str1">Updates focus on strengths first</li>
+          <li data-i18n="support.str2">Micro goals are set with 2–3 week check-ins</li>
+          <li data-i18n="support.str3">Tips for home support are provided</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Digital Citizenship -->
+    <section id="citizenship" class="card">
+      <h2 data-i18n="citizenship.title">🌍 Digital Citizenship & Professional Skills</h2>
+      <ul>
+        <li data-i18n="citizenship.p1">Time management</li>
+        <li data-i18n="citizenship.p2">Email etiquette</li>
+        <li data-i18n="citizenship.p3">Collaboration</li>
+        <li data-i18n="citizenship.p4">Responsible tech use</li>
+      </ul>
+    </section>
+
+    <!-- Help -->
+    <section id="help" class="card">
+      <h2 data-i18n="help.title">🧠 How Students Get Help</h2>
+      <ul>
+        <li data-i18n="help.h1">Flexible meeting options (phone, Zoom/Teams)</li>
+        <li data-i18n="help.h2">Translation available</li>
+        <li data-i18n="help.h3">Checkpoints every 3–4 weeks</li>
