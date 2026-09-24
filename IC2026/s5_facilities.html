@@ -5,18 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Standard 5 - Facilities</title>
   <link rel="stylesheet" href="standard-content.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #f5f8fc;
+    }
+
+    main {
+      padding: 1rem 1rem 2rem;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-tabs button {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #0b4f8a;
+      background: #fff;
+      color: #0b4f8a;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .doc-tabs button:hover {
+      background: #e8f1fb;
+    }
+
+    .doc-tabs button.active {
+      background: #0b4f8a;
+      color: #fff;
+    }
+
+    .doc-tabs button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      border-color: #9fb6ca;
+      color: #6b7f91;
+      background: #eef2f6;
+    }
+
+    .toolbar a {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: #0b4f8a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .toolbar a:hover {
+      background: #083d69;
+    }
+
+    .pdf-wrap {
+      background: #fff;
+      border: 1px solid #dfeaf7;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(18, 41, 67, 0.08);
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      min-height: 92vh;
+      border: 0;
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
   <main>
-    <span class="badge">s5_facilities.html</span>
-    <h1>Standard 5 - Facilities</h1>
-    <ul>
-      <li>Classroom and lab photos showing instructional setup</li>
-      <li>Hardware inventory and replacement planning documents</li>
-      <li>Software inventory and license evidence</li>
-      <li>Budget records and grant purchase documentation</li>
-    </ul>
-    <p>This is a starter page for Standard 5 evidence collection.</p>
+    <div class="toolbar">
+      <div class="doc-tabs" role="tablist" aria-label="Standard 5 documents">
+        <button type="button" class="active" data-file="Standard5_budget.pdf" data-title="Standard 5 Budget">Budget</button>
+        <button type="button" disabled title="Not updated yet">Facilities (coming soon)</button>
+        <button type="button" disabled title="Not updated yet">Equipment (coming soon)</button>
+        <button type="button" disabled title="Not updated yet">Classroom (coming soon)</button>
+      </div>
+      <a id="openNewTab" href="Standard5_budget.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+    </div>
+
+    <div class="pdf-wrap">
+      <iframe id="pdfFrame" src="Standard5_budget.pdf" title="Standard 5 Budget"></iframe>
+    </div>
   </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.doc-tabs button[data-file]');
+    const frame = document.getElementById('pdfFrame');
+    const openLink = document.getElementById('openNewTab');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const file = tab.dataset.file;
+        const title = tab.dataset.title;
+
+        tabs.forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        frame.src = file;
+        frame.title = title;
+        openLink.href = file;
+      });
+    });
+  </script>
 </body>
 </html>
