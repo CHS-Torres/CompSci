@@ -5,17 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Standard 4 - Business</title>
   <link rel="stylesheet" href="standard-content.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #f5f8fc;
+    }
+
+    main {
+      padding: 1rem 1rem 2rem;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .toolbar a {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: #0b4f8a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .toolbar a:hover {
+      background: #083d69;
+    }
+
+    .pdf-wrap {
+      background: #fff;
+      border: 1px solid #dfeaf7;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(18, 41, 67, 0.08);
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      min-height: 92vh;
+      border: 0;
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
   <main>
-    <span class="badge">s4_employability_biz.html</span>
-    <h1>Standard 4 - Business Employability Evidence</h1>
-    <ul>
-      <li>Career development assignments</li>
-      <li>Professional communication artifacts</li>
-      <li>Presentation and interview documentation</li>
-    </ul>
-    <p>This is a sample Business content page for Standard 4.</p>
+    <div class="toolbar">
+      <a href="S4_biz_Skills.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+    </div>
+
+    <div class="pdf-wrap">
+      <iframe src="S4_biz_Skills.pdf" title="Standard 4 Business Employability Skills PDF"></iframe>
+    </div>
   </main>
 </body>
 </html>
