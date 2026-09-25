@@ -1,0 +1,29 @@
+Category,Subcategory,Value
+Enrollment,Total Students,1467
+Enrollment,9th Grade,387
+Enrollment,10th Grade,395
+Enrollment,11th Grade,311
+Enrollment,12th Grade,374
+,,
+Gender,Male,761
+Gender,Female,706
+,,
+Ethnicity,Hispanic/Latino,506
+Ethnicity,American Indian/Alaska Native,3
+Ethnicity,Asian,50
+Ethnicity,Black or African American,290
+Ethnicity,Native Hawaiian/Pacific Islander,0
+Ethnicity,White,559
+Ethnicity,Two or More Races,58
+,,
+CTAE,AV Tech 1,42
+CTAE,AV Tech 2,21
+CTAE,Law Enforcement Services,23
+CTAE,EMR,20
+CTAE,Financial Services,16
+CTAE,JROTC,14
+CTAE,Comp Sci with IDT,10
+CTAE,Computer Science,8
+CTAE,Game Design,6
+CTAE,Sports Medicine,6
+CTAE,Allied Health & Medicine,3

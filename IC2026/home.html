@@ -5,18 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IC2026 Home</title>
   <link rel="stylesheet" href="standard-content.css" />
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    main {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 1rem;
+    }
+
+    .dashboard-carousel {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1.6s ease;
+      text-align: center;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .carousel-slide h2 {
+      margin: 0;
+      color: #0b4f8a;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+    }
+
+    .slide-subtitle {
+      margin: 0;
+      color: #25486d;
+      font-weight: 600;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+    }
+
+    .slide-logo {
+      width: min(62vw, 460px);
+      max-width: 90%;
+      height: auto;
+    }
+
+    .slide-tagline {
+      margin: 0;
+      color: #0b4f8a;
+      font-weight: 700;
+      font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+    }
+
+    .slide-subtext {
+      margin: 0;
+      color: #25486d;
+      font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    }
+
+    .slide-mission-img {
+      width: min(50vw, 380px);
+      max-width: 90%;
+      height: auto;
+    }
+
+    .carousel-slide canvas {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid #0b4f8a;
+      background: #fff;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .carousel-dot.active {
+      background: #0b4f8a;
+    }
+  </style>
 </head>
 <body class="home-page">
   <main>
-    <span class="badge">home.html</span>
-    <h1>Overview</h1>
-    <ul>
-      <li>Centennial High School</li>
-      <li>Business & Computer Science Programs</li>
-      <li>Mission Statement</li>
-      <li>Teacher Information</li>
-    </ul>
-    <p>This home page is the default view for the IC2026 section.</p>
+    <div class="dashboard-carousel" id="dashboardCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide active" data-slide="0">
+          <img class="slide-logo" src="../images/logo.png" alt="Centennial High School logo" />
+        </div>
+        <div class="carousel-slide" data-slide="1">
+          <h2>Mission and Vision</h2>
+          <p class="slide-tagline">Centennial Knights Collaborate. Think. Learn. Create.</p>
+          <p class="slide-subtext">The PK-12 Centennial Schools</p>
+          <img class="slide-mission-img" src="Mission.png" alt="Centennial Schools Mission" />
+        </div>
+        <div class="carousel-slide" data-slide="2">
+          <h2>Grade Level Enrollment</h2>
+          <p class="slide-subtitle" id="enrollmentSubtitle"></p>
+          <canvas id="enrollmentChart"></canvas>
+        </div>
+        <div class="carousel-slide" data-slide="3">
+          <h2>Student Demographics</h2>
+          <canvas id="demographicsChart"></canvas>
+          <p class="slide-subtitle" id="genderSubtitle"></p>
+        </div>
+        <div class="carousel-slide" data-slide="4">
+          <h2>CTAE Pathway Completers</h2>
+          <canvas id="ctaeChart"></canvas>
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
   </main>
+  <script src="data/dashboard.js"></script>
 </body>
 </html>
