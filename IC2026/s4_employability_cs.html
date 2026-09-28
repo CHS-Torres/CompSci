@@ -5,17 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Standard 4 - Computer Science</title>
   <link rel="stylesheet" href="standard-content.css" />
+  <style>
+    body {
+      background: #f5f8fc;
+    }
+
+    main {
+      padding: 1rem 1rem 2rem;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-tabs button {
+      padding: 0.5rem 0.9rem;
+      border: 1px solid #0b4f8a;
+      border-radius: 999px;
+      background: #fff;
+      color: #0b4f8a;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .doc-tabs button:hover {
+      background: #e8f1fb;
+    }
+
+    .doc-tabs button.active {
+      background: #0b4f8a;
+      color: #fff;
+    }
+
+    .toolbar a {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: #0b4f8a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .toolbar a:hover {
+      background: #083d69;
+    }
+
+    .pdf-wrap {
+      background: #fff;
+      border: 1px solid #dfeaf7;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(18, 41, 67, 0.08);
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      min-height: 92vh;
+      border: 0;
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
   <main>
-    <span class="badge">s4_employability_cs.html</span>
-    <h1>Standard 4 - Computer Science Employability Evidence</h1>
-    <ul>
-      <li>Mock interviews and technical presentations</li>
-      <li>Career research portfolios</li>
-      <li>Employability skill rubrics and reflections</li>
-    </ul>
-    <p>This is a sample CS content page for Standard 4.</p>
+    <h1>Standard 4 - Computer Science Evidence</h1>
+    <div class="toolbar">
+      <div class="doc-tabs" role="tablist" aria-label="Standard 4 Computer Science documents">
+        <button type="button" class="active" data-file="S4_cs_skills.pdf" data-title="Employability Skills">Employability Skills</button>
+        <button type="button" data-file="S4_cs_careerdev.pdf" data-title="Career Development">Career Dev</button>
+      </div>
+      <a id="openNewTab" href="S4_cs_skills.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+    </div>
+
+    <div class="pdf-wrap">
+      <iframe id="pdfFrame" src="S4_cs_skills.pdf" title="Employability Skills"></iframe>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('.doc-tabs button[data-file]');
+      const frame = document.getElementById('pdfFrame');
+      const openLink = document.getElementById('openNewTab');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const file = tab.dataset.file;
+          const title = tab.dataset.title;
+
+          tabs.forEach((item) => item.classList.remove('active'));
+          tab.classList.add('active');
+
+          frame.src = file;
+          frame.title = title;
+          openLink.href = file;
+        });
+      });
+    </script>
   </main>
 </body>
 </html>
