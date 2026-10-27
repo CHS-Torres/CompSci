@@ -18,13 +18,43 @@
     .toolbar {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
       gap: 1rem;
       margin-bottom: 1rem;
       flex-wrap: wrap;
     }
 
-    .toolbar a {
+    .doc-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-tabs button,
+    .doc-tabs a {
+      display: inline-block;
+      padding: 0.5rem 0.9rem;
+      border: 1px solid #0b4f8a;
+      border-radius: 999px;
+      background: #fff;
+      color: #0b4f8a;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .doc-tabs button:hover,
+    .doc-tabs a:hover {
+      background: #e8f1fb;
+    }
+
+    .doc-tabs button.active {
+      background: #0b4f8a;
+      color: #fff;
+    }
+
+    .toolbar > a {
       display: inline-block;
       padding: 0.5rem 0.9rem;
       border-radius: 999px;
@@ -35,7 +65,7 @@
       font-size: 0.9rem;
     }
 
-    .toolbar a:hover {
+    .toolbar > a:hover {
       background: #083d69;
     }
 
@@ -59,12 +89,37 @@
 <body>
   <main>
     <div class="toolbar">
-      <a href="S2_Business.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
+      <div class="doc-tabs" role="tablist" aria-label="Standard 2 Business documents">
+        <button type="button" class="active" data-file="S2_Business.pdf" data-title="Standard 2 Business PDF">Teachers</button>
+        <button type="button" data-file="S2_recruitment_activities.pdf" data-title="Recruitment Activities">Recruitment Activities</button>
+        <a href="index.html" target="_top">CHS demographics</a>
+      </div>
+      <a id="openNewTab" href="S2_Business.pdf" target="_blank" rel="noopener">Open PDF in new tab</a>
     </div>
 
     <div class="pdf-wrap">
-      <iframe src="S2_Business.pdf" title="Standard 2 Business PDF"></iframe>
+      <iframe id="pdfFrame" src="S2_Business.pdf" title="Standard 2 Business PDF"></iframe>
     </div>
   </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.doc-tabs button[data-file]');
+    const frame = document.getElementById('pdfFrame');
+    const openLink = document.getElementById('openNewTab');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const file = tab.dataset.file;
+        const title = tab.dataset.title;
+
+        tabs.forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        frame.src = file;
+        frame.title = title;
+        openLink.href = file;
+      });
+    });
+  </script>
 </body>
 </html>
